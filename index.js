@@ -33,6 +33,7 @@ async function run() {
     app.get('/reviews', async (req, res) => {
         const cursor = reviewsCollection.find();
         const result = await cursor.toArray();
+        console.log("Fetched Reviews:", result);
         res.send(result);
       })
 
